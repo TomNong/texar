@@ -1,4 +1,4 @@
-"""Texar config file of the GPT-2 117M model.
+"""Texar config file of the GPT-2 model_117M model.
 """
 
 vocab_size = 50257
@@ -18,7 +18,7 @@ decoder = {
         "num_heads": 12,
         "output_dim": dim,
     },
-    "position_embedder_type": "simple",
+    "position_embedder_type": "variables",
     "position_size": 1024,
     "position_embedder_hparams": {
         "dim": dim,
