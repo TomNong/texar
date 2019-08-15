@@ -8553,10 +8553,12 @@ a:link,
 a:visited,
 a:hover {
  text-decoration:none;
+ color:#ee4c2c
 }
 p a:link,
 p a:visited,
 p a:hover {
+ color:#ee4c2c;
  text-decoration:none
 }
 @media screen and (min-width: 768px) {
