@@ -16,6 +16,7 @@
     <link href="css/carousel.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
+    <link href="css/card.css" rel="stylesheet">
   </head>
 <!-- NAVBAR
 ================================================== -->
@@ -104,30 +105,31 @@
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="col-lg-4">
-          <div class="threecard">
-            <img class="img-circle" src="assets/examples.svg" alt="Generic placeholder image" width="120" height="110">
-            <h2>Examples</h2>
-            <p>Explore projects done with Texar</p>
-            <p><a class="btn btn-default" href="https://github.com/asyml/texar/tree/master/examples" role="button">View details &raquo;</a></p>
-          </div>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <div class="threecard">
-            <img class="img-circle" src="assets/models.svg" alt="Generic placeholder image" width="120" height="110">
-            <h2>Documentations</h2>
-            <p>Explore more information about Texar</p>
-            <p><a class="btn btn-default" href="https://texar.readthedocs.io/en/latest" role="button">View details &raquo;</a></p>
-          </div>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <div class="threecard">
-            <img class="img-circle" src="assets/tutorials.svg" alt="Generic placeholder image" width="120" height="110">
-            <h2>Tutorials</h2>
-            <p>Learn how to use Texar in your projects</p>
-            <p><a class="btn btn-default" href="./index.html" role="button">Coming soon &raquo;</a></p>
-          </div>
-        </div><!-- /.col-lg-4 -->
+        <p></p>
+        <div class="cards" id="cards-primary">
+        <div class="card">
+            <a class="card-main" title="GitHub" href="https://github.com/asyml/texar-pytorch">
+                <img src="assets/pytorch.png" alt="PyTorch">
+                <div class="project"><strong>Texar-pytorch</strong></div>
+                <p>Extensible and fast implementation benefiting from PyTorch ease of use.</p>
+            </a>
+            <ul>
+                <li><a href="https://texar.readthedocs.io/en/latest/">Documentation</a></li>
+                <li><a href="https://github.com/asyml/texar-pytorch/tree/master/examples">Examples</a></li>
+            </ul>
+        </div>
+        <div class="card">
+            <a class="card-main" title="GitHub" href="https://github.com/asyml/texar">
+                <img src="assets/tensorflow.png" alt="TensorFlow">
+                <div class="project"><strong>Texar-tf</strong></div>
+                <p>Modular and stable implementation relying on the TensorFlow ecosystem.</p>
+            </a>
+            <ul>
+                <li><a href="https://texar.readthedocs.io/en/latest/">Documentation</a></li>
+                <li><a href="https://github.com/asyml/texar/tree/master/examples">Examples</a></li>
+            </ul>
+        </div>
+    </div>
       </div><!-- /.row -->
 
 
@@ -139,22 +141,10 @@
       <div class="col-md-7">
         <h2 class="featurette-heading">Get Started <span class="text-muted"></span></h2>
         <p class="lead">Click to copy the install command</p>
-        <code class="getstarted" id="startcode">pip install git+https://github.com/asyml/texar#egg=texar</code><button type="button" id="change" onclick="copyToClipboard('#startcode');change();" class="startbutton">Copy</button>
-      </div>
-      <div class="col-md-5">
-        <img class="featurette-image img-responsive center-block" src="assets/started.gif" alt="Generic placeholder image" style="width:400px; height:300px;">
-      </div>
-    </div>
-
-    <div class="container-fluid quick-start-module quick-starts">
-        <div class="row featurette">
-            <div class="col-md-7">
-              <h2 class="featurette-heading">Get Started <span class="text-muted"></span></h2>
-            </div>
-          </div>
-      <div class="container">
-        <div class="row">
-            <div class="col-md-8 start-locally-col">
+        <div class="container-fluid quick-start-module quick-starts">
+          <div class="container">
+            
+              <div class="col-md-8 start-locally-col">
                 <div class="row">
                     <div class="col-md-3 headings">
                         <div class="col-md-12 title-block">
@@ -262,12 +252,17 @@
                                 <div class="col-md-12" id="command"><pre>conda install pytorch torchvision -c pytorch<br># MacOS Binaries dont support CUDA, install from source if CUDA is needed</pre></div>
                             </div>
                         </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-    </div>
-  </div>
+                    </div>
+                </div>
+             </div>
+           <!-- /.row -->
+         </div>
+       </div>
+     </div>
+     <div class="col-md-5">
+       <img class="featurette-image img-responsive center-block" src="assets/started.gif" alt="Generic placeholder image" style="width:400px; height:300px;">
+     </div>
+   </div><!-- /.row featurette -->
 
 
       <hr class="featurette-divider">
@@ -354,5 +349,6 @@
     <script>$(function(){$(".typed").typed({strings: ["Text Generation Toolkit", "Flexibility", "Modular", "Dialog System", "Machine Translation", "Question Answering"],typeSpeed: 60,loop: true  });});</script>
     -->
     <script src="js/typed.min.js"></script>
+    <script src="js/quick-start-module.js"></script>
   </body>
 </html>
